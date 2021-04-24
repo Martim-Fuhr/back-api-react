@@ -1,4 +1,10 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _Comments = require('../models/Comments'); var _Comments2 = _interopRequireDefault(_Comments);
+Object.defineProperty(exports, '__esModule', { value: true });
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+const _Comments = require('../models/Comments');
+
+const _Comments2 = _interopRequireDefault(_Comments);
 
 class CommentsController {
   async index(request, response) {
@@ -12,7 +18,7 @@ class CommentsController {
 
   async store(request, response) {
     const { name, comment } = request.body;
-    if (name || comment === '') {
+    if (name === '' || comment === '') {
       return response.json({ message: 'Campos inválidos' });
     }
     return response.json(await _Comments2.default.create({ name, comment }));
@@ -39,4 +45,4 @@ class CommentsController {
   }
 }
 
-exports. default = new CommentsController();
+exports.default = new CommentsController();
