@@ -1,10 +1,4 @@
-Object.defineProperty(exports, '__esModule', { value: true });
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-const _Comments = require('../models/Comments');
-
-const _Comments2 = _interopRequireDefault(_Comments);
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _Comments = require('../models/Comments'); var _Comments2 = _interopRequireDefault(_Comments);
 
 class CommentsController {
   async index(request, response) {
@@ -45,4 +39,4 @@ class CommentsController {
   }
 }
 
-exports.default = new CommentsController();
+exports. default = new CommentsController();
